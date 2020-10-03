@@ -4,12 +4,14 @@ int main()
 {
 	sf::RenderWindow window(sf::VideoMode(1080, 720), "Game from scratch!");
 
+	////// Circle
 	sf::CircleShape collision(100.f);
 	collision.setPosition({ 200.f, 200.f });
 	collision.setFillColor(sf::Color::Red);
 
 	while (window.isOpen())
 	{
+		window.draw(collision);
 		window.display();
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 		{
