@@ -22,8 +22,8 @@ int main()
 
 
 
-	int spriteSizeX = character.Princee.getSize().x / 3;
-	int spriteSizeY = character.Princee.getSize().y / 4;
+	int spriteSizeX = character.Princee.getSize().x / 5;
+	int spriteSizeY = character.Princee.getSize().y / 8;
 	shapeSprite.setTextureRect(sf::IntRect(0, 0, spriteSizeX, spriteSizeY));
 
 	int animationFrame = 0;
@@ -36,12 +36,12 @@ int main()
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 		{
 			shapeSprite.move(.1f, 0.f);
-			shapeSprite.setTextureRect(sf::IntRect(spriteSizeX * animationFrame, spriteSizeY * 1, spriteSizeX, spriteSizeY));
+			shapeSprite.setTextureRect(sf::IntRect(spriteSizeX * animationFrame, spriteSizeY * 3, spriteSizeX, spriteSizeY));
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 		{
 			shapeSprite.move(-.1f, 0.f);
-			shapeSprite.setTextureRect(sf::IntRect(spriteSizeX * animationFrame, spriteSizeY * 3, spriteSizeX, spriteSizeY));
+			shapeSprite.setTextureRect(sf::IntRect(spriteSizeX * animationFrame, spriteSizeY * 2, spriteSizeX, 32));
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 		{
