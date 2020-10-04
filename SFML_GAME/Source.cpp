@@ -8,17 +8,25 @@ struct Prince
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(1080, 720), "Watcharapol Yotadee 63010870");
+	sf::RenderWindow window(sf::VideoMode(1080,720), "Watcharapol Yotadee 63010870");
 	// INPUT_File
 	if (!character.Princee.loadFromFile("character/Prince.png"))
 	{
 		std::cout << "Load failed" << std::endl;
 	}
 
-	////// Sprite
+	// Sprite
 	sf::Sprite shapeSprite;
 	shapeSprite.setTexture(character.Princee);
-	shapeSprite.setTextureRect(sf::IntRect(0,0, 32, 38));
+	shapeSprite.setTextureRect(sf::IntRect(0,0, 40, 54));
+
+
+
+	int spriteSizeX = character.Princee.getSize().x / 3;
+	int spriteSizeY = character.Princee.getSize().y / 4;
+	shapeSprite.setTextureRect(sf::IntRect(0, 0, spriteSizeX, spriteSizeY));
+
+	int animationFrame = 0;
 
 	while (window.isOpen())
 	{
