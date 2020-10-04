@@ -8,6 +8,7 @@ int main()
 
 	////// Texture
 	sf::Texture playerTexture;
+	// INPUT_File
 	if (!playerTexture.loadFromFile("character/Prince.png"))
 	{
 		std::cout << "Load failed" << std::endl;
@@ -16,12 +17,13 @@ int main()
 	////// Sprite
 	sf::Sprite shapeSprite;
 	shapeSprite.setTexture(playerTexture);
-	shapeSprite.setTextureRect(sf::IntRect(0, 0, 32, 38));
+	shapeSprite.setTextureRect(sf::IntRect(0,0, 32, 38));
 
 	while (window.isOpen())
 	{
 		window.draw(shapeSprite);
 		window.display();
+		// GOGO
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 		{
 			shapeSprite.move(.1f, 0.f);
@@ -38,6 +40,7 @@ int main()
 		{
 			shapeSprite.move(0.f, .1f);
 		}
+		//STOP
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 		{
 			window.close();
