@@ -1,22 +1,23 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
+struct Prince
+{
+	sf::Texture Princee;
+}character;
+
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(1080, 720), "Watcharapol Yotadee 63010870");
-
-
-	////// Texture
-	sf::Texture playerTexture;
 	// INPUT_File
-	if (!playerTexture.loadFromFile("character/Prince.png"))
+	if (!character.Princee.loadFromFile("character/Prince.png"))
 	{
 		std::cout << "Load failed" << std::endl;
 	}
 
 	////// Sprite
 	sf::Sprite shapeSprite;
-	shapeSprite.setTexture(playerTexture);
+	shapeSprite.setTexture(character.Princee);
 	shapeSprite.setTextureRect(sf::IntRect(0,0, 32, 38));
 
 	while (window.isOpen())
